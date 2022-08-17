@@ -12,6 +12,8 @@ function generarNumero() {
   let numAleatorio = Math.round(Math.random() * (0 - 10) + 10);
   numeroX = numAleatorio;
   console.log(numeroX);
+
+  btnComenzar.className = 'btn btn-danger disabled my-3'
 }
 
 function adivinar(e) {
@@ -25,6 +27,7 @@ function adivinar(e) {
         Adivinaste!
       </div>`;
       seccionPadre.appendChild(alert);
+      formulario.reset();
   } else if (x > numeroX) {
     // alert("El numero es menor al que ingresaste");
     let alert = document.createElement("div");
